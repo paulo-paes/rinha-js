@@ -9,7 +9,7 @@ function start() {
     console.error('Failed to compile:\n' + error.message)
   } finally {
     const end = performance.now()
-    console.info(`Compilation ended in ${Number(end - st).toFixed(2)} milliseconds`)
+    console.info(`Execution ended in ${Number(end - st).toFixed(2)} milliseconds`)
   }
 }
 function binaryExp(lhs, rhs, op) {
