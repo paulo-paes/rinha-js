@@ -4,4 +4,4 @@ WORKDIR /var/app
 
 COPY . .
 
-CMD node main.js /var/rinha/source.rinha.json
+CMD node main.js
