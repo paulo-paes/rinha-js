@@ -12,7 +12,6 @@ function start() {
     console.info(`Compilation ended in ${Number(end - st).toFixed(2)} milliseconds`)
   }
 }
-let count = 0
 function binaryExp(lhs, rhs, op) {
   switch(op) {
     case 'Add':
@@ -125,7 +124,6 @@ function compile(input, scope) {
     case 'Function':
       return { ...input, scope }
     case 'Call':
-      console.log('CALL COUNT', ++count)
       const func = compile(input.callee, scope);
       const args = input.arguments.map(a => compile(a, scope))
       const nscope = { ...scope }
